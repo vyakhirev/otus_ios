@@ -1,14 +1,14 @@
 //
-//  otus_2App.swift
-//  otus_2
+//  task_2App.swift
+//  task_2
 //
-//  Created by Vyahirev.Mihail on 10.03.2026.
+//  Created by Vyahirev.Mihail on 12.03.2026.
 //
 
 import SwiftUI
 
 @main
-struct otus_2App: App {
+struct task_2App: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

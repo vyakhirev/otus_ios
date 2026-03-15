@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  otus_2
+//  task_2
 //
-//  Created by Vyahirev.Mihail on 10.03.2026.
+//  Created by Vyahirev.Mihail on 12.03.2026.
 //
 
 import SwiftUI
