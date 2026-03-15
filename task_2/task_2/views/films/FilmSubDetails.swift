@@ -8,7 +8,7 @@
 import SwiftUI
 import OpenAPIClient
 
-struct FilmsDetails: View {
+struct FilmsSubDetails: View {
     let film: FilmSearchResponseFilms
     
     init(film: FilmSearchResponseFilms) {
@@ -26,7 +26,7 @@ struct FilmsDetails: View {
                 Text(film.year ?? "")
                     .font(.subheadline)
                     .foregroundColor(.gray)
-                Text(film.countries.?.description ?? "")
+                Text(film.countries?.description ?? "")
                     .font(.subheadline)
                     .foregroundColor(.gray)
             }

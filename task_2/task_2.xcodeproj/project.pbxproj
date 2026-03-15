@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		71075D852F631FF700F25C27 /* OpenAPIClient in Frameworks */ = {isa = PBXBuildFile; productRef = 71075D842F631FF700F25C27 /* OpenAPIClient */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		71075D752F631FE700F25C27 /* task_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = task_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71075D852F631FF700F25C27 /* OpenAPIClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = task_2;
 			packageProductDependencies = (
+				71075D842F631FF700F25C27 /* OpenAPIClient */,
 			);
 			productName = task_2;
 			productReference = 71075D752F631FE700F25C27 /* task_2.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = 71075D6C2F631FE700F25C27;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				71075D832F631FF700F25C27 /* XCLocalSwiftPackageReference "../../../temp/build/KinopoiskApi" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 71075D762F631FE700F25C27 /* Products */;
 			projectDirPath = "";
@@ -328,6 +337,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		71075D832F631FF700F25C27 /* XCLocalSwiftPackageReference "../../../temp/build/KinopoiskApi" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../../temp/build/KinopoiskApi;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		71075D842F631FF700F25C27 /* OpenAPIClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OpenAPIClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71075D6D2F631FE700F25C27 /* Project object */;
 }
