@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		71075D852F631FF700F25C27 /* OpenAPIClient in Frameworks */ = {isa = PBXBuildFile; productRef = 71075D842F631FF700F25C27 /* OpenAPIClient */; };
+		718F92992F6E544F00DCD63B /* core in Frameworks */ = {isa = PBXBuildFile; productRef = 718F92982F6E544F00DCD63B /* core */; };
+		718F92C42F6E5F1500DCD63B /* OpenAPIClient in Frameworks */ = {isa = PBXBuildFile; productRef = 718F92C32F6E5F1500DCD63B /* OpenAPIClient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +29,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				718F92C42F6E5F1500DCD63B /* OpenAPIClient in Frameworks */,
 				71075D852F631FF700F25C27 /* OpenAPIClient in Frameworks */,
+				718F92992F6E544F00DCD63B /* core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +75,8 @@
 			name = task_2;
 			packageProductDependencies = (
 				71075D842F631FF700F25C27 /* OpenAPIClient */,
+				718F92982F6E544F00DCD63B /* core */,
+				718F92C32F6E5F1500DCD63B /* OpenAPIClient */,
 			);
 			productName = task_2;
 			productReference = 71075D752F631FE700F25C27 /* task_2.app */;
@@ -101,7 +107,8 @@
 			mainGroup = 71075D6C2F631FE700F25C27;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				71075D832F631FF700F25C27 /* XCLocalSwiftPackageReference "../../../temp/build/KinopoiskApi" */,
+				718F92972F6E544F00DCD63B /* XCLocalSwiftPackageReference "core" */,
+				718F92C22F6E5F1500DCD63B /* XCLocalSwiftPackageReference "KinopoiskApi" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 71075D762F631FE700F25C27 /* Products */;
@@ -267,6 +274,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -275,6 +283,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.vyhirev.task-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -298,6 +310,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,6 +319,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.vyhirev.task-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -339,14 +356,26 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		71075D832F631FF700F25C27 /* XCLocalSwiftPackageReference "../../../temp/build/KinopoiskApi" */ = {
+		718F92972F6E544F00DCD63B /* XCLocalSwiftPackageReference "core" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../../temp/build/KinopoiskApi;
+			relativePath = core;
+		};
+		718F92C22F6E5F1500DCD63B /* XCLocalSwiftPackageReference "KinopoiskApi" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = KinopoiskApi;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		71075D842F631FF700F25C27 /* OpenAPIClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OpenAPIClient;
+		};
+		718F92982F6E544F00DCD63B /* core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = core;
+		};
+		718F92C32F6E5F1500DCD63B /* OpenAPIClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = OpenAPIClient;
 		};

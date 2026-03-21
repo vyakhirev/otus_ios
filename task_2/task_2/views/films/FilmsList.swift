@@ -7,9 +7,12 @@
 
 import SwiftUI
 import OpenAPIClient
+import core
 
 struct FilmsList: View {
-    
+    @Injected var api:ApiService?
+    @Injected var local:ApiService?
+
     @State var films = [FilmSearchResponseFilms]()
     @State var errorMessage: String?
     @State var isLoading = false

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import OpenAPIClient
+import core
 
 struct ContentView: View {
     @State private var selectedCategory: Category = .films
