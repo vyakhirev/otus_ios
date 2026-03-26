@@ -10,30 +10,23 @@ import OpenAPIClient
 import core
 
 struct FilmsList: View {
-    @Injected var api:ApiService?
-    @Injected var local:ApiService?
-
-    @State var films = [FilmSearchResponseFilms]()
-    @State var errorMessage: String?
-    @State var isLoading = false
-    @State var isLoadingMore = false
-    @State var page = 1
-    @State var searchText: String = ""
-    @State var title: String = ""
-
+    @StateObject private var viewModel: FilmsListViewModel
+    
     init(searchText: String, title: String) {
-        _searchText = State(initialValue: searchText)
-        _title = State(initialValue: title)
+        _viewModel = StateObject(wrappedValue: FilmsListViewModel(
+            searchText: searchText,
+            title: title
+        ))
     }
     
     var body: some View {
         NavigationView {
             List {
-                if isLoading && films.isEmpty {
+                if viewModel.isLoading && viewModel.films.isEmpty {
                     ProgressView()
                         .frame(maxWidth: .infinity, alignment: .center)
                 } else {
-                    ForEach(films, id: \.id) { film in
+                    ForEach(viewModel.films, id: \.id) { film in
                         NavigationLink {
                             FilmsDetails(film: film)
                         } label: {
@@ -69,57 +62,40 @@ struct FilmsList: View {
                                 }
                             }
                             .padding(.vertical, 4)
+                            .onAppear {
+                                if viewModel.shouldLoadMore(film) {
+                                    Task {
+                                        await viewModel.loadMoreFilms()
+                                    }
+                                }
+                            }
                         }
                     }
                 }
-                if !isLoadingMore {
+                
+                if viewModel.isLoadingMore {
                     HStack {
                         Spacer()
                         ProgressView()
                         Spacer()
                     }
-                    .pagination(films: $films,page: $page,searchText: $searchText)
                 }
             }
-            .navigationTitle($title)
-            .searchable(text: $searchText)
+            .navigationTitle($viewModel.title)
+            .searchable(text: $viewModel.searchText)
             .onSubmit(of: .search) {
-                Task {
-                    await loadFilms()
-                }
+                viewModel.search()
             }
-            .alert("Ошибка", isPresented: .constant(errorMessage != nil)) {
+            .alert("Ошибка", isPresented: .constant(viewModel.errorMessage != nil)) {
                 Button("OK") {
-                    errorMessage = nil
+                    viewModel.errorMessage = nil
                 }
             } message: {
-                Text(errorMessage ?? "")
+                Text(viewModel.errorMessage ?? "")
             }
         }
         .task {
-            await loadFilms()
-        }
-    }
-    
-    func loadFilms() async {
-        guard !searchText.isEmpty else { return }
-        
-        isLoading = true
-        defer { isLoading = false }
-        
-        isLoadingMore = true
-        defer { isLoadingMore = false }
-        
-        do {
-            let list = try await FilmsAPI.apiV21FilmsSearchByKeywordGet(
-                keyword: searchText,
-                page: page
-            )
-            films = list.films
-        } catch {
-            await MainActor.run {
-                errorMessage = error.localizedDescription
-            }
+            await viewModel.loadFilms()
         }
     }
 }

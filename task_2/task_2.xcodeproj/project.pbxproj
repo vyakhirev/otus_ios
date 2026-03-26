@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		71075D852F631FF700F25C27 /* OpenAPIClient in Frameworks */ = {isa = PBXBuildFile; productRef = 71075D842F631FF700F25C27 /* OpenAPIClient */; };
-		718F92992F6E544F00DCD63B /* core in Frameworks */ = {isa = PBXBuildFile; productRef = 718F92982F6E544F00DCD63B /* core */; };
-		718F92C42F6E5F1500DCD63B /* OpenAPIClient in Frameworks */ = {isa = PBXBuildFile; productRef = 718F92C32F6E5F1500DCD63B /* OpenAPIClient */; };
+		716C4C082F7591880051B27D /* core in Frameworks */ = {isa = PBXBuildFile; productRef = 716C4C072F7591880051B27D /* core */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				718F92C42F6E5F1500DCD63B /* OpenAPIClient in Frameworks */,
-				71075D852F631FF700F25C27 /* OpenAPIClient in Frameworks */,
-				718F92992F6E544F00DCD63B /* core in Frameworks */,
+				716C4C082F7591880051B27D /* core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +38,7 @@
 			isa = PBXGroup;
 			children = (
 				71075D772F631FE700F25C27 /* task_2 */,
+				716C4C062F7591880051B27D /* Frameworks */,
 				71075D762F631FE700F25C27 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +49,13 @@
 				71075D752F631FE700F25C27 /* task_2.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		716C4C062F7591880051B27D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +78,7 @@
 			);
 			name = task_2;
 			packageProductDependencies = (
-				71075D842F631FF700F25C27 /* OpenAPIClient */,
-				718F92982F6E544F00DCD63B /* core */,
-				718F92C32F6E5F1500DCD63B /* OpenAPIClient */,
+				716C4C072F7591880051B27D /* core */,
 			);
 			productName = task_2;
 			productReference = 71075D752F631FE700F25C27 /* task_2.app */;
@@ -367,17 +369,10 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		71075D842F631FF700F25C27 /* OpenAPIClient */ = {
+		716C4C072F7591880051B27D /* core */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = OpenAPIClient;
-		};
-		718F92982F6E544F00DCD63B /* core */ = {
-			isa = XCSwiftPackageProductDependency;
+			package = 718F92972F6E544F00DCD63B /* XCLocalSwiftPackageReference "core" */;
 			productName = core;
-		};
-		718F92C32F6E5F1500DCD63B /* OpenAPIClient */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = OpenAPIClient;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

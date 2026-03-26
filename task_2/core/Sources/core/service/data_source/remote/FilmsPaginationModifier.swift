@@ -20,15 +20,19 @@ struct PaginationModifier: ViewModifier {
     @Binding var searchText: String
 
     func body(content: Content) -> some View {
-        content.task {
-            do {
-                let list = try await FilmsAPI.apiV21FilmsSearchByKeywordGet(
-                    keyword: searchText,
-                    page: page
-                )
-                films.append(contentsOf: list.films)
-                page += 1
-            } catch { }
+        if #available(iOS 15.0, *) {
+            content.task {
+                do {
+                    let list = try await FilmsAPI.apiV21FilmsSearchByKeywordGet(
+                        keyword: searchText,
+                        page: page
+                    )
+                    films.append(contentsOf: list.films)
+                    page += 1
+                } catch { }
+            }
+        } else {
+            // Fallback on earlier versions
         }
     }
 }
