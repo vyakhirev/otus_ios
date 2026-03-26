@@ -8,6 +8,7 @@
 import SwiftUI
 import OpenAPIClient
 import core
+import DesignSystem
 
 struct FilmsList: View {
     @StateObject private var viewModel: FilmsListViewModel
@@ -31,27 +32,7 @@ struct FilmsList: View {
                             FilmsDetails(film: film)
                         } label: {
                             HStack(spacing: 12) {
-                                AsyncImage(url: URL(string: film.posterUrl ?? "")) { phase in
-                                    switch phase {
-                                    case .empty:
-                                        ProgressView()
-                                            .frame(width: 60, height: 90)
-                                    case .success(let image):
-                                        image
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 60, height: 90)
-                                            .cornerRadius(6)
-                                    case .failure:
-                                        Image(systemName: "photo")
-                                            .frame(width: 60, height: 90)
-                                            .background(Color.gray.opacity(0.2))
-                                            .cornerRadius(6)
-                                    @unknown default:
-                                        EmptyView()
-                                    }
-                                }
-                                
+                                AsyncImageView(url: film.posterUrl, width: 60, height: 90)
                                 VStack(alignment: .leading, spacing: 4) {
                                     Text(film.nameRu ?? film.nameEn ?? "Без названия")
                                         .font(.headline)

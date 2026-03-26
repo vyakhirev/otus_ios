@@ -35,7 +35,7 @@ class FilmsListViewModel: ObservableObject {
         defer { isLoading = false }
         
         do {
-            let list = try await FilmsAPI.apiV21FilmsSearchByKeywordGet(
+            let list = try await api!.searchByKeyword(
                 keyword: searchText,
                 page: page
             )
@@ -54,7 +54,7 @@ class FilmsListViewModel: ObservableObject {
         page += 1
         
         do {
-            let list = try await FilmsAPI.apiV21FilmsSearchByKeywordGet(
+            let list = try await api!.searchByKeyword(
                 keyword: searchText,
                 page: page
             )

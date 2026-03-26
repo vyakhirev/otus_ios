@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		716C4C082F7591880051B27D /* core in Frameworks */ = {isa = PBXBuildFile; productRef = 716C4C072F7591880051B27D /* core */; };
+		716C4C602F75A0D70051B27D /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 716C4C5F2F75A0D70051B27D /* DesignSystem */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				716C4C082F7591880051B27D /* core in Frameworks */,
+				716C4C602F75A0D70051B27D /* DesignSystem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +81,7 @@
 			name = task_2;
 			packageProductDependencies = (
 				716C4C072F7591880051B27D /* core */,
+				716C4C5F2F75A0D70051B27D /* DesignSystem */,
 			);
 			productName = task_2;
 			productReference = 71075D752F631FE700F25C27 /* task_2.app */;
@@ -111,6 +114,7 @@
 			packageReferences = (
 				718F92972F6E544F00DCD63B /* XCLocalSwiftPackageReference "core" */,
 				718F92C22F6E5F1500DCD63B /* XCLocalSwiftPackageReference "KinopoiskApi" */,
+				716C4C5E2F75A0D70051B27D /* XCLocalSwiftPackageReference "DesignSystem" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 71075D762F631FE700F25C27 /* Products */;
@@ -358,6 +362,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
+		716C4C5E2F75A0D70051B27D /* XCLocalSwiftPackageReference "DesignSystem" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = DesignSystem;
+		};
 		718F92972F6E544F00DCD63B /* XCLocalSwiftPackageReference "core" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = core;
@@ -373,6 +381,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 718F92972F6E544F00DCD63B /* XCLocalSwiftPackageReference "core" */;
 			productName = core;
+		};
+		716C4C5F2F75A0D70051B27D /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

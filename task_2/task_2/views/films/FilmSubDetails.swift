@@ -30,8 +30,6 @@ struct FilmsSubDetails: View {
                     .font(.subheadline)
                     .foregroundColor(.gray)
             }
-            
-            
             Spacer()
         }
     }
