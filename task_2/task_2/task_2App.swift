@@ -9,6 +9,11 @@ import SwiftUI
 
 @main
 struct task_2App: App {
+    
+    init() {
+        Configurator.shared.register()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
