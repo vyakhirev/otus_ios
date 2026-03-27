@@ -8,16 +8,30 @@
 import SwiftUI
 import OpenAPIClient
 import core
+import RswiftResources
 
 struct ContentView: View {
     @State private var selectedCategory: Category = .films
     @Namespace private var animation
     
     enum Category: String, CaseIterable {
-        case films = "Фильмы"
-        case series = "Сериалы"
-        case cartoons = "Мультфильмы"
-        case anime = "Аниме"
+        case films
+            case series
+            case cartoons
+            case anime
+            
+            var localizedString: String {
+                switch self {
+                case .films:
+                    return R.string.localizable.films()
+                case .series:
+                    return R.string.localizable.series()
+                case .cartoons:
+                    return R.string.localizable.cartoons()
+                case .anime:
+                    return R.string.localizable.anime()
+                }
+            }
     }
     
     var body: some View {
@@ -26,7 +40,7 @@ struct ContentView: View {
                 HStack(spacing: 10) {
                     ForEach(Category.allCases, id: \.self) { category in
                         VStack(spacing: 6) {
-                            Text(category.rawValue)
+                            Text(category.localizedString)
                                 .font(.system(.body, design: .rounded))
                                 .fontWeight(selectedCategory == category ? .semibold : .regular)
                                 .foregroundColor(selectedCategory == category ? .blue : .gray)
@@ -49,9 +63,12 @@ struct ContentView: View {
             
             switch selectedCategory {
             case .films:
-                FilmsList(searchText: "Terminator", title: "Фильмы")
+                FilmsList(searchText: "Terminator", title: R.string.localizable.films())
             case .series:
-                FilmsList(searchText: "Dr House", title: "Сериалы")
+                FilmsList(
+                    searchText: "Dr House",
+                    title: R.string.localizable.series()
+                )
             default:
                 PlaceholderView(category: selectedCategory.rawValue)
             }

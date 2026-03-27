@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		716C4C082F7591880051B27D /* core in Frameworks */ = {isa = PBXBuildFile; productRef = 716C4C072F7591880051B27D /* core */; };
 		716C4C602F75A0D70051B27D /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 716C4C5F2F75A0D70051B27D /* DesignSystem */; };
+		716C4C7D2F76ADDF0051B27D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 716C4C7B2F76ADDF0051B27D /* Localizable.strings */; };
+		716C4C832F76B2CE0051B27D /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 716C4C822F76B2CE0051B27D /* RswiftLibrary */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		71075D752F631FE700F25C27 /* task_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = task_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		716C4C7C2F76ADDF0051B27D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		716C4C7E2F76ADE50051B27D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -30,6 +34,7 @@
 			files = (
 				716C4C082F7591880051B27D /* core in Frameworks */,
 				716C4C602F75A0D70051B27D /* DesignSystem in Frameworks */,
+				716C4C832F76B2CE0051B27D /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +44,7 @@
 		71075D6C2F631FE700F25C27 = {
 			isa = PBXGroup;
 			children = (
+				716C4C7B2F76ADDF0051B27D /* Localizable.strings */,
 				71075D772F631FE700F25C27 /* task_2 */,
 				716C4C062F7591880051B27D /* Frameworks */,
 				71075D762F631FE700F25C27 /* Products */,
@@ -74,6 +80,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				716C4C8D2F76B39A0051B27D /* PBXTargetDependency */,
+				716C4C852F76B3360051B27D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				71075D772F631FE700F25C27 /* task_2 */,
@@ -82,6 +90,7 @@
 			packageProductDependencies = (
 				716C4C072F7591880051B27D /* core */,
 				716C4C5F2F75A0D70051B27D /* DesignSystem */,
+				716C4C822F76B2CE0051B27D /* RswiftLibrary */,
 			);
 			productName = task_2;
 			productReference = 71075D752F631FE700F25C27 /* task_2.app */;
@@ -108,6 +117,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 71075D6C2F631FE700F25C27;
 			minimizedProjectReferenceProxies = 1;
@@ -115,6 +125,7 @@
 				718F92972F6E544F00DCD63B /* XCLocalSwiftPackageReference "core" */,
 				718F92C22F6E5F1500DCD63B /* XCLocalSwiftPackageReference "KinopoiskApi" */,
 				716C4C5E2F75A0D70051B27D /* XCLocalSwiftPackageReference "DesignSystem" */,
+				716C4C812F76B2CE0051B27D /* XCRemoteSwiftPackageReference "R" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 71075D762F631FE700F25C27 /* Products */;
@@ -131,6 +142,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				716C4C7D2F76ADDF0051B27D /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +157,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		716C4C852F76B3360051B27D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 716C4C842F76B3360051B27D /* RswiftGenerateInternalResources */;
+		};
+		716C4C8D2F76B39A0051B27D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 716C4C8C2F76B39A0051B27D /* RswiftLibrary */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		716C4C7B2F76ADDF0051B27D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				716C4C7C2F76ADDF0051B27D /* en */,
+				716C4C7E2F76ADE50051B27D /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		71075D7E2F631FE800F25C27 /* Debug */ = {
@@ -206,6 +241,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -262,6 +298,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -376,6 +413,17 @@
 		};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		716C4C812F76B2CE0051B27D /* XCRemoteSwiftPackageReference "R" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		716C4C072F7591880051B27D /* core */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -385,6 +433,21 @@
 		716C4C5F2F75A0D70051B27D /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DesignSystem;
+		};
+		716C4C822F76B2CE0051B27D /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 716C4C812F76B2CE0051B27D /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
+		};
+		716C4C842F76B3360051B27D /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 716C4C812F76B2CE0051B27D /* XCRemoteSwiftPackageReference "R" */;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
+		716C4C8C2F76B39A0051B27D /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 716C4C812F76B2CE0051B27D /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

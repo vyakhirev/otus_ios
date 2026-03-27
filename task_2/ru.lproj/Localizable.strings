@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  task_2
+
+  Created by Vyahirev.Mihail on 27.03.2026.
+  
+*/
+"films" = "Фильмы";
+"series" = "Сериалы";
+"cartoons" = "Мультфильмы";
+"anime" = "Аниме";
